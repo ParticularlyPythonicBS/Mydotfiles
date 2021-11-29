@@ -2,6 +2,8 @@
 Dotfile management using toml-bombadil
 
 Dotfile manager : https://github.com/oknozor/toml-bombadil
+
+
 Other addons needed:
 * vim/neovim
   * https://github.com/junegunn/vim-plug
