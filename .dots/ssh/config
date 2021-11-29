@@ -1,0 +1,9 @@
+Host lambda
+	User aradhak5
+	HostName ditto-lambda.physics.ncsu.edu
+	ServerAliveInterval 120
+    ServerAliveCountMax 30
+
+Host remarkable
+    User root
+    HostName 10.11.99.1

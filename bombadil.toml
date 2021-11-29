@@ -1,0 +1,32 @@
+# {dotfiles}/bombadil.toml
+
+# Path to your dotfiles relative to your $HOME directory
+dotfiles_dir = "Documents/dotfiles"
+[settings]
+# An array of toml files paths containing the variables to inject in your templatize dotfiles
+# You can have multiple var files as long as variable names does not colide. 
+vars = [ "vars.toml" ]
+
+# An array of post install shell commands
+hooks = [ ]
+[settings.dots]
+# A dot entry representing a symlink, `source` is relative to `dotfiles_dir` 
+# and `target` shall be relative to $HOME directory or absolute.
+# You can have as many dot entry as you want, linking files or directories
+aliases = {source = "aliases", target = ".aliases"}
+alacritty = {source = "alacritty/alacritty.yml", target = ".config/alacritty/alacritty.yml" }
+zsh = {source = "zsh/zshrc", target = ".zshrc"}
+vim = {source = "vim/vimrc", target = ".vimrc"}
+nvim = {source = "nvim/init.vim", target = ".config/nvim/init.vim"}
+i3 = {source = "i3", target = ".config/i3"}
+picom = {source = "picom/picom.conf", target = ".config/picom/picom.conf"}
+polybar_config = {source = "polybar/config", target = ".config/polybar/config"}
+polybar_launch = {source = "polybar/launch.sh", target = ".config/polybar/launch.sh"}
+rofi_config = {source = "rofi/config.rasi", target = ".config/rofi/config.rasi"}
+rofi_dmenu_theme = { source = "rofi/themes/dmenu.rasi", target = ".config/rofi/themes/dmenu.rasi"}
+gitconfig = { source = "git/gitconfig", target = ".gitconfig" }
+gitignore = { source = "git/gitignore", target = ".gitignore" }
+neofetch = { source = "neofetch", target = ".config/neofetch" }
+ssh_config = {source = "ssh/config", target = ".ssh/config"}
+X_xinitrc = {source = "X/xinitrc", target = ".xinitrc"}
+X_xresources = {source = "X/Xresources", target = ".Xresources"}
