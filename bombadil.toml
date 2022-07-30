@@ -17,7 +17,7 @@ aliases = {source = "aliases", target = ".aliases"}
 alacritty = {source = "alacritty/alacritty.yml", target = ".config/alacritty/alacritty.yml" }
 zsh = {source = "zsh/zshrc", target = ".zshrc"}
 vim = {source = "vim/vimrc", target = ".vimrc"}
-nvim = {source = "nvim/init.vim", target = ".config/nvim/init.vim"}
+nvim = {source = "nvim/init.lua", target = ".config/nvim/init.lua"}
 i3 = {source = "i3", target = ".config/i3"}
 picom = {source = "picom/picom.conf", target = ".config/picom/picom.conf"}
 polybar_config = {source = "polybar/config", target = ".config/polybar/config"}
