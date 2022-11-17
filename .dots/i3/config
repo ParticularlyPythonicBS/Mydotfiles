@@ -54,10 +54,12 @@ bindsym $mod+Shift+q kill
 # This mode search for .desktop files in /usr/share/applications.
 # This is the recommended mode. It searches for the programs as
 # defined in .desktop file, wit their description, and corresponding
-bindsym $mod+d exec --no-startup-id "rofi -show drun -theme ~/.config/rofi/themes/dmenu.rasi"
-
-# Thip should only be used if a program lacks a .desktop file.
-bindsym $mod+Shift+d exec --no-startup-id "rofi -show run -theme ~/.config/rofi/themes/dmenu.rasi" 
+# bindsym $mod+d exec --no-startup-id "rofi -show drun -theme ~/.config/rofi/themes/dmenu.rasi"
+bindsym $mod+d exec --no-startup-id "sh $HOME/.config/rofi/bin/launcher"
+# This should only be used if a program lacks a .desktop file.
+bindsym $mod+Shift+d exec --no-startup-id "sh $HOME/.config/rofi/bin/runner"
+# This should only be used if a program lacks a .desktop file.
+# bindsym $mod+Shift+d exec --no-startup-id "rofi -show run -theme ~/.config/rofi/themes/dmenu.rasi" 
 
 # Launch Polybar. Take a look at ~/.confi/polybar/config to
 # configure the bar.
@@ -79,19 +81,22 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 bindsym $mod+l exec betterlockscreen -l
 
 # Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, (u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-mode "$mode_system" {
-    bindsym l exec loginctl lock-session, mode "default"
-    bindsym s exec systemctl suspend, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec systemctl reboot, mode "default"
-    bindsym Shift+s exec shutdown now, mode "default"
+
+bindsym $mod+0 exec --no-startup-id "sh $HOME/.config/rofi/bin/powermenu"
+# Thip should only be used if a program lacks a .desktop file.
+# bindsym $mod+0 mode "$mode_system"
+# set $mode_system (l)ock, (e)xit, (u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+# mode "$mode_system" {
+#     bindsym l exec loginctl lock-session, mode "default"
+#     bindsym s exec systemctl suspend, mode "default"
+#     bindsym e exec --no-startup-id i3exit logout, mode "default"
+#     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+#     bindsym r exec systemctl reboot, mode "default"
+#     bindsym Shift+s exec shutdown now, mode "default"
     # exit system mode: "Enter" or "Escape"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
+#    bindsym Return mode "default"
+#    bindsym Escape mode "default"
+# }
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -280,7 +285,8 @@ bindsym $mod+r mode "resize"
 bindsym $mod+b exec vivaldi-stable
 bindsym $mod+Shift+b exec vivaldi-stable --incognito
 bindsym $mod+c exec code
-
+bindsym $mod+p exec flameshot gui
+bindsym $mod+Shift+p exec full
 #Multi Monitor (Dual Monitor, extended monitor)
 #Replace HDMI2 with DVI-2, VGA-2, DP-2, DVI-2 etc. Get value by typing xrandr in the terminal.
 #If X is a natural number, then;
