@@ -138,6 +138,7 @@ alias newtag='git tag -a'
 #
 
 eval $(thefuck --alias)
+eval "$(starship init zsh)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
