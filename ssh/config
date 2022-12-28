@@ -11,3 +11,11 @@ Host remarkable
 Host pihole
     User anil
     HostName 192.168.0.202
+
+Host server
+    User anil
+    HostName 192.168.0.217
+
+Host router
+    User root
+    HostName 192.168.1.1
