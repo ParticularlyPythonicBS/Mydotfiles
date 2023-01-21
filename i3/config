@@ -32,11 +32,43 @@ bindsym $mod+y border pixel 1
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar.
-font pango:System San Francisco Display 14
+ font pango:System San Francisco Display 14
+#font pango: SF Pro Text:style=Regular:pixelsize=14, Font Awesome 5 Brands Regular, Font Awesome 5 Free Solid, Font Awesome 5 Free Regular
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# adding catppuccin mocha colors
+set $rosewater #f5e0dc
+set $flamingo  #f2cdcd
+set $pink      #f5c2e7
+set $mauve     #cba6f7
+set $red       #f38ba8
+set $maroon    #eba0ac
+set $peach     #fab387
+set $green     #a6e3a1
+set $teal      #94e2d5
+set $sky       #89dceb
+set $sapphire  #74c7ec
+set $blue      #89b4fa
+set $lavender  #b4befe
+set $text      #cdd6f4
+set $subtext1  #bac2de
+set $subtext0  #a6adc8
+set $overlay2  #9399b2
+set $overlay1  #7f849c
+set $overlay0  #6c7086
+set $surface2  #585b70
+set $surface1  #45475a
+set $surface0  #313244
+set $base      #1e1e2e
+set $mantle    #181825
+set $crust     #11111b
+
+# target                 title     bg    text   indicator  border
+client.focused           $crust     $base $text  $rosewater $crust
+client.focused_inactive  $crust    $base $text  $rosewater $crust
+client.unfocused         $crust    $base $text  $rosewater $crust
+client.urgent            $crust    $base $peach $overlay0  $peach
+client.placeholder       $crust $base $text  $overlay0  $crust
+client.background        $base
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -109,12 +141,6 @@ bindsym $mod+l exec betterlockscreen -l
 # system will launch betterlockscreen
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-# We use this. System dark theme is applied to it.
-exec --no-startup-id nm-applet
-exec_always --no-startup-id xinput --set-prop "DELL07E6:00 06CB:76AF Touchpad" "libinput Natural Scrolling Enabled" 1
-exec --no-startup-id blueman-applet
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -193,15 +219,15 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
+set $ws1 "1 "
+set $ws2 "2 "
+set $ws3 "3 "
+set $ws4 "4 "
+set $ws5 "5 "
+set $ws6 "6 "
+set $ws7 "7 " 
+set $ws8 "8 "
+set $ws9 "9 "
 
 # 10] switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -271,7 +297,20 @@ bindsym $mod+r mode "resize"
         #status_command i3status -c ~/.config/i3/i3status.conf
         #status_command i3blocks -c ~/.config/i3/i3blocks.conf
 #}
+bar {
+    font pango: System San Francisco Display 11, Font Awesome 6 Solid 11, Font Awesome 6 Brands 11, SF Pro Regular 11
+    position top
+    tray_output none
+    colors {
+        background $base
+        statusline $text
+    }
 
+    status_command /usr/bin/bumblebee-status \
+        -m nic arch_update nvidiagpu memory datetime system\
+        -p nic.include=enp24s0 nic.format='{ip}' nvidiagpu.format='GPU: {temp}°C {mem_used}/{mem_total} MiB' \
+        -t dracula-powerline
+}
 
 # Launch a program on a certain workspace, from rofi (which may or may not have a keybinding)
 # for_window [class="nameofapp"] move to workspace $wsno.

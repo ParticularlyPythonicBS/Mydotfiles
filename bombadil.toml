@@ -15,7 +15,7 @@ hooks = [ ]
 # You can have as many dot entry as you want, linking files or directories
 aliases = {source = "aliases", target = ".aliases"}
 alacritty = {source = "alacritty/alacritty.yml", target = ".config/alacritty/alacritty.yml" }
-alacritty_theme = {source = "alacritty/catppuccin", target = ".config/alacritty/catppuccin" }
+zsh_mocha = {source = "zsh/zsh-syntax-highlighting/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh", target = ".zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh"}
 zsh = {source = "zsh/zshrc", target = ".zshrc"}
 vim = {source = "vim/vimrc", target = ".vimrc"}
 nvim = {source = "nvim/init.lua", target = ".config/nvim/init.lua"}

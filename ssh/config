@@ -8,14 +8,16 @@ Host remarkable
     User root
     HostName 10.11.99.1
 
-Host pihole
-    User anil
-    HostName 192.168.0.202
-
 Host server
     User anil
-    HostName 192.168.0.217
+    HostName 192.168.50.72
+    Port 4097
+
+Host pihole
+    User anil
+    HostName 192.168.50.133
+    Port 22
 
 Host router
-    User root
-    HostName 192.168.1.1
+    User anil
+    HostName 192.168.50.1

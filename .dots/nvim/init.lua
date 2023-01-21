@@ -139,7 +139,11 @@ return require('packer').startup(function()
   use 'scrooloose/nerdtree'
   use 'tiagofumo/vim-nerdtree-syntax-highlight'
   use 'ryanoasis/vim-devicons'
-
+  use {
+     'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+      }
   -- Productivity --
   use 'vimwiki/vimwiki'
   use 'jreybert/vimagit'

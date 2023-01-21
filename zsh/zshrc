@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+path+=('/home/anil/.cargo/bin')
+export PATH
 # Path to your oh-my-zsh installation.
 export ZSH="/home/anil/.oh-my-zsh"
 
@@ -65,7 +66,11 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# now load zsh-syntax-highlighting plugin
+
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting poetry)
 
 
 source $ZSH/oh-my-zsh.sh
@@ -139,6 +144,7 @@ alias newtag='git tag -a'
 
 eval $(thefuck --alias)
 eval "$(starship init zsh)"
+
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
