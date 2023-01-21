@@ -24,6 +24,7 @@ i3 = {source = "i3", target = ".config/i3"}
 picom = {source = "picom/picom.conf", target = ".config/picom/picom.conf"}
 polybar_config = {source = "polybar/config", target = ".config/polybar/config"}
 polybar_launch = {source = "polybar/launch.sh", target = ".config/polybar/launch.sh"}
+bumblebee_theme = {source= "bumblebee/themes/mocha.json", target = ".config/bumblebee-status/themes/mocha.json"}
 rofi_config = {source = "rofi/config.rasi", target = ".config/rofi/config.rasi"}
 rofi_dmenu_theme = { source = "rofi/themes/dmenu.rasi", target = ".config/rofi/themes/dmenu.rasi"}
 rofi_launch = { source = "rofi/bin/launcher", target = ".config/rofi/bin/launcher"}

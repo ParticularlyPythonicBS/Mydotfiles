@@ -298,7 +298,7 @@ bindsym $mod+r mode "resize"
         #status_command i3blocks -c ~/.config/i3/i3blocks.conf
 #}
 bar {
-    font pango: System San Francisco Display 11, Font Awesome 6 Solid 11, Font Awesome 6 Brands 11, SF Pro Regular 11
+    font pango: System San Francisco Display 11, Font Awesome 6 Solid 13, Font Awesome 6 Brands 13, SF Pro Regular 11
     position top
     tray_output none
     colors {
@@ -309,7 +309,7 @@ bar {
     status_command /usr/bin/bumblebee-status \
         -m nic arch_update nvidiagpu memory datetime system\
         -p nic.include=enp24s0 nic.format='{ip}' nvidiagpu.format='GPU: {temp}°C {mem_used}/{mem_total} MiB' \
-        -t dracula-powerline
+        -t mocha
 }
 
 # Launch a program on a certain workspace, from rofi (which may or may not have a keybinding)
