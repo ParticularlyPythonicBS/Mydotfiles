@@ -1,1 +1,3 @@
+alias lt='ls --human-readable --size -1 -S --classify'
+alias ncsu_vpn="sudo openconnect --server=vpn.ncsu.edu --protocol=anyconnect --authgroup=2"
 

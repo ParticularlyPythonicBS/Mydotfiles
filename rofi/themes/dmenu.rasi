@@ -7,7 +7,7 @@
     background-color:      #0b63ef;
     border-color:          White;
     text-color:           White;
-    font: "System San Francsico Regular 22";
+    font: "System San Francsico Regular 14";
 }
 
 #window {
