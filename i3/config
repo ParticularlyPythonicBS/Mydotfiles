@@ -143,7 +143,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l --nof
 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
-
+exec thunar --daemon
 #multimedia keys
 bindsym XF86AudioPlay exec playerctl play-pause
 
@@ -326,6 +326,7 @@ bindsym $mod+Shift+b exec vivaldi-stable --incognito
 bindsym $mod+c exec code
 bindsym $mod+p exec flameshot gui
 bindsym $mod+Shift+p exec full
+bindsym $mod+t exec thunar
 #Multi Monitor (Dual Monitor, extended monitor)
 #Replace HDMI2 with DVI-2, VGA-2, DP-2, DVI-2 etc. Get value by typing xrandr in the terminal.
 #If X is a natural number, then;

@@ -128,15 +128,9 @@ require('lazy').setup({
       end,
     },
   },
-
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
+    --theming
+    "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   {
     -- Set lualine as statusline
@@ -145,7 +139,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'auto',
+        theme = 'catppuccin',
         component_separators = '|',
         section_separators = '',
       },
@@ -190,7 +184,14 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
-
+  {
+    --copilot
+    'github/copilot.vim'
+  },
+  {
+    --getting better at vim motions
+    'ThePrimeagen/vim-be-good'
+  },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
   --       Uncomment any of the lines below to enable them.
@@ -202,7 +203,7 @@ require('lazy').setup({
   --    up-to-date with whatever is in the kickstart repo.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  { import = 'custom.plugins' },
+  --{ import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
@@ -510,6 +511,20 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+--configure catppuccin
+require("catppuccin").setup({
+  flavour = "mocha",  
+  integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        telescope = true,
+        notify = false,
+        mini = false,
+    }
+})
+vim.cmd.colorscheme "catppuccin"
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
