@@ -150,6 +150,7 @@ eval "$(starship init zsh)"
 if [ -f "~/.aliases" ]; then
     . "~/.aliases"
 fi
+source $HOME/.aliases
 
 
 # >>> conda initialize >>>

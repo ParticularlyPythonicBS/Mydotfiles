@@ -89,9 +89,9 @@ module-margin-right = 2
 
 dpi = 96
 
-font-0 = SF Pro Text:style=Regular:pixelsize=14;1
-font-1 = SF Compact Text:style=Light:pixelsize=14;1
-font-2 = SF Mono Text:style=Regular Italic:pixelsize=14;1
+font-0 = IosevkaTerm Nerd Font:style=Regular:pixelsize=14;1
+font-1 = IosevkaTerm Nerd Font:style=Light:pixelsize=14;1
+font-2 = IosevkaTerm Nerd Font Mono:style=Regular Italic:pixelsize=14;1
 font-3 = Font Awesome 6 Free:pixelsize=14;2
 font-4 = Font Awesome 6 Free Solid:pixelsize=14;2
 font-5 = Font Awesome 6 Brands:pixelsize=14;2
