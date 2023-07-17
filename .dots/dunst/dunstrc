@@ -1,13 +1,3 @@
-# Lighthaus Color theme for Dunst
-# GIT: https://github.com/lighthaus-theme/dunst
-# Author: Adhiraj Sirohi (https://github.com/brutuski)
-#         Vasundhara Sharma (https://github.com/vasundhasauras)
-
-# Copyright © 2020-Present Lighthaus Theme
-# Copyright © 2020-Present Adhiraj Sirohi
-# Copyright © 2020-Present Vasundhara Sharma
-
-
 [global]
 frame_color = "#89B4FA"
 separator_color= frame
@@ -26,5 +16,4 @@ timeout = 10
 background = "#1E1E2E"
 foreground = "#CDD6F4"
 frame_color = "#FAB387"
-timeout = 10
 

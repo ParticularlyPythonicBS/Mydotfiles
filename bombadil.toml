@@ -38,3 +38,5 @@ ssh_config = {source = "ssh/config", target = ".ssh/config"}
 X_xinitrc = {source = "X/xinitrc", target = ".xinitrc"}
 X_xresources = {source = "X/Xresources", target = ".Xresources"}
 X_xmodmap = {source = "X/Xmodmap", target = ".Xmodmap"}
+zathura = {source = "zathura/zathurarc", target=".config/zathura/zathurarc"}
+zathura_theme = {source = "zathura/catppuccin-mocha", target=".config/zathura/catppuccin-mocha"}
