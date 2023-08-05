@@ -104,9 +104,15 @@ require('lazy').setup({
 
       -- Adds a number of user-friendly snippets
       'rafamadriz/friendly-snippets',
+      'SirVer/ultisnips',
+      'honza/vim-snippets'
     },
   },
-
+  {
+    -- Latex support 
+    'lervag/vimtex',
+    'vim-pandoc/vim-pandoc-syntax'
+  },
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   {
