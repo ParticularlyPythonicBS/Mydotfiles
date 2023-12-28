@@ -93,11 +93,12 @@ bindsym $mod+Shift+d exec --no-startup-id "sh $HOME/.config/rofi/bin/runner"
 # This should only be used if a program lacks a .desktop file.
 # bindsym $mod+Shift+d exec --no-startup-id "rofi -show run -theme ~/.config/rofi/themes/dmenu.rasi" 
 
+# multi-monitor setup
+exec_always --no-startup-id xrandr --output HDMI-0 --auto --rotate left --left-of DP-4
 # Launch Polybar. Take a look at ~/.confi/polybar/config to
 # configure the bar.
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # exec_always --no-startup-id polybar bar1
-
 # Display Wallpaper, always.
 exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/i3/WP.jpg
 

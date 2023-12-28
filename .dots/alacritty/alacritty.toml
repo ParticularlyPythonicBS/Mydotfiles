@@ -1,0 +1,96 @@
+theme = "Catppuccin"
+"window.opacity" = 0.95
+
+[bell]
+animation = "EaseOutExpo"
+color = "#ffffff"
+duration = 0
+
+[[colors.indexed_colors]]
+color = "0xF8BD96"
+index = 16
+
+[[colors.indexed_colors]]
+color = "0xF5E0DC"
+index = 17
+
+[colors.bright]
+black = "0x988BA2"
+blue = "0x96CDFB"
+cyan = "0x89DCEB"
+green = "0xABE9B3"
+magenta = "0xF5C2E7"
+red = "0xF28FAD"
+white = "0xD9E0EE"
+yellow = "0xFAE3B0"
+
+[colors.cursor]
+cursor = "0xF5E0DC"
+text = "0x1E1D2F"
+
+[colors.normal]
+black = "0x6E6C7E"
+blue = "0x96CDFB"
+cyan = "0x89DCEB"
+green = "0xABE9B3"
+magenta = "0xF5C2E7"
+red = "0xF28FAD"
+white = "0xD9E0EE"
+yellow = "0xFAE3B0"
+
+[colors.primary]
+background = "0x1E1E2E"
+foreground = "0xCDD4F4"
+
+[cursor]
+program = "/bin/zsh"
+unfocused_hollow = true
+
+[cursor.style]
+shape = "Underline"
+
+[env]
+TERM = "alacritty"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "IosevkaTerm"
+style = "Bold"
+
+[font.italic]
+family = "IosevkaTerm"
+style = "Regular Italic"
+
+[font.mono]
+family = "IosevkaTerm"
+style = "Mono"
+
+[font.normal]
+family = "IosevkaTerm"
+style = "Regular"
+
+[mouse]
+hide_when_typing = false
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[mouse.double_click]
+threshold = 300
+
+[mouse.triple_click]
+threshold = 300
+
+[window]
+dynamic_padding = true
+dynamic_title = true
+history = 10000
+multiplier = 3
+startup_mode = "Maximized"
+
+[window.padding]
+x = 5
+y = 5
