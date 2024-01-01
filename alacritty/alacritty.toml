@@ -1,5 +1,3 @@
-theme = "Catppuccin"
-"window.opacity" = 0.95
 
 [bell]
 animation = "EaseOutExpo"
@@ -43,7 +41,6 @@ background = "0x1E1E2E"
 foreground = "0xCDD4F4"
 
 [cursor]
-program = "/bin/zsh"
 unfocused_hollow = true
 
 [cursor.style]
@@ -63,9 +60,6 @@ style = "Bold"
 family = "IosevkaTerm"
 style = "Regular Italic"
 
-[font.mono]
-family = "IosevkaTerm"
-style = "Mono"
 
 [font.normal]
 family = "IosevkaTerm"
@@ -78,17 +72,9 @@ hide_when_typing = false
 action = "PasteSelection"
 mouse = "Middle"
 
-[mouse.double_click]
-threshold = 300
-
-[mouse.triple_click]
-threshold = 300
-
 [window]
 dynamic_padding = true
 dynamic_title = true
-history = 10000
-multiplier = 3
 startup_mode = "Maximized"
 
 [window.padding]
