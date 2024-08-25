@@ -321,8 +321,10 @@ bar {
 # defined keybinding, on a certain workspace, without
 # touching program launcher. Assign Programs to respective
 # workspaces.
-bindsym $mod+b exec vivaldi-stable
-bindsym $mod+Shift+b exec vivaldi-stable --incognito
+# bindsym $mod+b exec vivaldi-stable
+bindsym $mod+b exec zen-browser-optimized
+# bindsym $mod+Shift+b exec vivaldi-stable --incognito
+bindsym $mod+Shift+b exec zen-browser-optimized --private-window
 bindsym $mod+c exec code
 bindsym $mod+p exec flameshot gui
 bindsym $mod+Shift+p exec full

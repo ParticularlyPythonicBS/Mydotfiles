@@ -168,3 +168,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+. "$HOME/.cargo/env"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/.local/lib/mojo
+export PATH=$PATH:~/.modular/pkg/packages.modular.com_mojo/bin/
+export MODULAR_HOME="/home/anil/.modular"
+export PATH="/home/anil/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
+export LD_LIBRARY_PATH=/home/anil/.local/lib/arch-mojo:$LD_LIBRARY_PATH
+export MODULAR_HOME="/home/anil/.modular"
+export PATH="/home/anil/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
